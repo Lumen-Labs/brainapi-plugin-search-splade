@@ -1,0 +1,15 @@
+name: search-splade
+version: "0.1.0"
+entry_point: main
+description: >
+  Learned-sparse first-stage retriever for POST /retrieve/search.
+  Own inverted index (plugin-local). Request via channels=["passages","plugin:splade"]
+  or channels=["plugin:splade"]. Unknown/absent plugin is 400, never a silent BM25 fallback.
+  Does not run on /retrieve/context.
+author: BrainAPI
+brainapi_version: ">=2.17.0"
+tags:
+  - search
+  - splade
+  - sparse
+priority: 61
